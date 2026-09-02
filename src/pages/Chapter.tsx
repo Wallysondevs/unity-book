@@ -12,7 +12,11 @@ export default function ChapterPage() {
   const slug = params?.slug ?? "";
   const ch = chapterMap[slug];
 
-  useEffect(() => { window.scrollTo({ top: 0, behavior: "smooth" }); }, [slug]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    const title = ch ? `${ch.title} — Unity: Do Zero ao Avançado` : "Página não encontrada — Unity: Do Zero ao Avançado";
+    if (document.title !== title) document.title = title;
+  }, [slug]);
 
   if (!ch) return <NotFound />;
 

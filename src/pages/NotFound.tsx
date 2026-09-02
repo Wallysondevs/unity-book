@@ -1,7 +1,11 @@
 import { Link } from "wouter";
 import { Home as HomeIcon, Box } from "lucide-react";
+import { useEffect } from "react";
 
 export default function NotFound() {
+  useEffect(() => {
+    document.title = "Página não encontrada — Unity: Do Zero ao Avançado";
+  }, []);
   return (
     <div className="max-w-xl mx-auto px-4 py-20 text-center">
       <Box size={64} className="mx-auto mb-4 text-unity-cyan" />
