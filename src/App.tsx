@@ -13,7 +13,7 @@ export default function App() {
   return (
     <Router hook={useHashLocation}>
       <div className="min-h-screen flex flex-col">
-        <Header onMenu={() => setMenuOpen(true)} />
+        <Header onMenu={() => setMenuOpen(true)} menuOpen={menuOpen} />
         <div className="flex-1 flex">
           <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
           <main className="flex-1 min-w-0">

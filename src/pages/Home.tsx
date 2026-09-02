@@ -3,8 +3,12 @@ import { sections, chapters, chapterMap } from "@/data/chapters";
 import { motion } from "framer-motion";
 import * as Icons from "lucide-react";
 import { ArrowRight, BookOpen, Box } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Unity: Do Zero ao Avançado — Wallyson Devs";
+  }, []);
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
       <motion.section
